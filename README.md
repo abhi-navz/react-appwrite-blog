@@ -25,3 +25,44 @@ npm install
 ```
 npm run dev
 ```
+### Tailwind setup instructions in ur project [Link](https://tailwindcss.com/docs/guides/vite)
+
+1. Install tailwind and other dependencies.
+
+```
+npm install -D tailwindcss postcss autoprefixer
+```
+
+2. Generate the `postcss.config.js` and `tailwind.config.js` file
+
+```
+npx tailwindcss init -p
+```
+
+3. Add the files and extensions to the content property in tailwind config.
+
+```
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+```
+
+4. Add the tailwind directive on the top of index.css file
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+5. Then run the server tailwind should be integrated...
