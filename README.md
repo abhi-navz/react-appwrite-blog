@@ -66,3 +66,8 @@ export default {
 ```
 
 5. Then run the server tailwind should be integrated...
+
+### Adding additional pluggins and dependencies
+```
+ npm i react-redux @reduxjs/toolkit react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+```
