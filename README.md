@@ -71,3 +71,32 @@ export default {
 ```
  npm i react-redux @reduxjs/toolkit react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
 ```
+### Adding auto import sort for eslint
+
+1. Install the pluggin
+
+```
+npm i eslint-plugin-simple-import-sort
+```
+
+2. Add rule in `eslintrc.cjs`
+
+```
+ "simple-import-sort/imports": "error",
+```
+
+3. Add `simple-import-sort` in the pluggin array of `eslintrc.cjs`
+
+```
+plugins: ["..", "simple-import-sort"],
+```
+
+4. Open settings.json in vscode configuration and add the below two lines to fix the issues as per eslint rule on save.
+
+```
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+```
+
+5. Most importantly don't forget to install `Eslint` extension if haven't already.
