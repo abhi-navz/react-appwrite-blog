@@ -100,3 +100,18 @@ plugins: ["..", "simple-import-sort"],
 ```
 
 5. Most importantly don't forget to install `Eslint` extension if haven't already.
+
+## Adding .env (enviornment variables to Project)
+
+1. create a .env file in root directory of the project.
+2. create varaible with prefix `VITE` for ex.
+```
+VITE_SOME_KEY=123
+DB_PASSWORD=foobar // invalid
+```
+3. Loaded env variables are also exposed to your client source code via `import.meta.env` as strings.
+```
+console.log(import.meta.env.VITE_SOME_KEY) // 123
+console.log(import.meta.env.DB_PASSWORD) // undefined
+
+```
